@@ -31,7 +31,6 @@ To start the application in watch mode run:
    
 
     npm run test
-   To build the application and run the production version run:
 
  
 
