@@ -1,17 +1,17 @@
 
 ## Environment variables
 
-POSTGRES_HOST=127.0.0.1
-POSTGRES_DB=storefront
-POSTGRES_USER=magical_user
-POSTGRES_PASSWORD=12345678
-POSTGRES_TEST_DB=storefront_test
-POSTGRES_TEST_USER=magical_user_test
-POSTGRES_TEST_PASSWORD=123456
-ENV=dev
-BCRYPT_PASSWORD=speak-friend-and-enter
-SALT_ROUND=13
-JWT_SECRET=sEcReT0RkEy
+    POSTGRES_HOST=127.0.0.1
+    POSTGRES_DB=storefront
+    POSTGRES_USER=magical_user
+    POSTGRES_PASSWORD=12345678
+    POSTGRES_TEST_DB=storefront_test
+    POSTGRES_TEST_USER=magical_user_test
+    POSTGRES_TEST_PASSWORD=123456
+    ENV=dev
+    BCRYPT_PASSWORD=speak-friend-and-enter
+    SALT_ROUND=13
+    JWT_SECRET=sEcReT0RkEy
 
 ## The Store Front API
 ## Scripts 
