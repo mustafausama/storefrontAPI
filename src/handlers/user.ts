@@ -41,7 +41,8 @@ const create = async (req: Request, res: Response) => {
         password: req.body.password
     }
     const result = await store.create(user);
-    res.json(result)
+    const token = jwt.sign({ user: result }, process.env.JWT_SECRET as string);
+    res.json(token)
 }
 
 const register = async (req: Request, res: Response) => {
