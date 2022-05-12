@@ -26,10 +26,7 @@ To start the application in watch mode run:
   To execute the prettier script run:   
 
     npm run build
-   To **only** test the **already built** application run:
-   
 
-    npm run jasmine
    To build the application and test it run:
    
 
