@@ -9,7 +9,7 @@
     "migrate:up": "db-migrate up",
     "migrate:down": "db-migrate down",
     "migrate:reset": "db-migrate reset",
-    "test": "export NODE_ENV=test && npm run migrate:up > /dev/null && jasmine-ts && npm run migrate:reset > /dev/null",
+    "test": "npm run build &&export NODE_ENV=test&& db-migrate --env test up && jasmine && db-migrate --env test reset",
     "tsc": "tsc",
     "build": "rm -rf ./dist && tsc"
   },
@@ -27,7 +27,6 @@
     "@types/supertest": "^2.0.12",
     "jasmine": "^3.10.0",
     "jasmine-spec-reporter": "^7.0.0",
-    "jasmine-ts": "^0.4.0",
     "supertest": "^6.2.3",
     "ts-node": "^9.1.1",
     "tsc": "^2.0.4",
