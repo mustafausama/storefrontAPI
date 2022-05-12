@@ -34,14 +34,6 @@ const show = async (req: Request, res: Response) => {
 }
 
 const create = async (req: Request, res: Response) => {
-    try {
-        const authHeader = req.headers.authorization!
-        const token = authHeader.split(' ')[1];
-        jwt.verify(token, JWT_SECRET)
-    } catch (err) {
-        res.status(401).send("Unauthorised");
-        return
-    }
     const user: User = {
         username: req.body.username,
         firstName: req.body.firstName,
