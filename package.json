@@ -10,8 +10,7 @@
     "migrate:down": "db-migrate down",
     "migrate:reset": "db-migrate reset",
     "test": "npm run build &&export NODE_ENV=test&& db-migrate --env test up && jasmine && db-migrate --env test reset",
-    "tsc": "tsc",
-    "build": "rm -rf ./dist && tsc"
+    "build": "rm -rf ./dist && npx tsc"
   },
   "keywords": [],
   "author": "",
@@ -29,9 +28,7 @@
     "jasmine-spec-reporter": "^7.0.0",
     "supertest": "^6.2.3",
     "ts-node": "^9.1.1",
-    "tsc": "^2.0.4",
-    "tsc-watch": "^5.0.3",
-    "typescript": "^4.6.4"
+    "tsc-watch": "^5.0.3"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
