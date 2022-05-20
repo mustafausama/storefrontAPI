@@ -25,7 +25,7 @@ const create = async (req: Request, res: Response) => {
         status: STAT.active
     }
     const result = await store.create(order)
-    res.json(result)
+    res.send(result)
 }
 
 const addProdcut = async (req: Request, res: Response) => {
@@ -37,9 +37,9 @@ const addProdcut = async (req: Request, res: Response) => {
         res.status(401).send("Unauthorised");
         return
     }
-    const { order_id } = req.params;
-    const { produt_id, quantity } = req.body;
-    const result = await store.addProduct(quantity, order_id, produt_id);
+    const { id: order_id } = req.params;
+    const { product_id, quantity } = req.body;
+    const result = await store.addProduct(quantity, order_id, product_id);
     res.json(result)
 }
 

@@ -41,6 +41,18 @@ describe("Order endpoints and model", () => {
         const result = await store.create(order)
         order_id = result.id!;
     })
+    it("should create an order and return its information", async () => {
+        const response = await request.post('/orders').set('Authorization', `Bearer ${token}`)
+        expect(response.body.status).toEqual(STAT.active)
+    })
+    it("should add a product to order endpoint", async () => {
+        const load = {
+            product_id,
+            quantity: '3'
+        }
+        const response = await request.post(`/orders/${2}/products`).set('Authorization', `Bearer ${token}`).send(load);
+        expect(response.body.product_id).toEqual(load.product_id.toString());
+    })
     it("should add product to order", async () => {
         const result = await store.addProduct(3, order_id, product_id);
         expect(result).toBeTruthy()

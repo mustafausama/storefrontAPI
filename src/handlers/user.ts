@@ -63,8 +63,15 @@ const login = async (req: Request, res: Response) => {
         res.status(400).send("Invalid credentials");
         return;
     }
-    const token = jwt.sign({ user: result }, process.env.JWT_SECRET as string);
-    res.json(token)
+    const token = jwt.sign({
+        user: {
+            id: result.id,
+            username: result.username,
+            firstName: result.firstName,
+            lastName: result.lastName
+        }
+    }, process.env.JWT_SECRET as string);
+    res.send(token)
 }
 
 const user_routes = (app: express.Application) => {

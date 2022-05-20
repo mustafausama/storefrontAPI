@@ -18,16 +18,16 @@ const user: User = {
     password: 'password123'
 }
 
-
-
 describe("Product Model", () => {
+    let product_id: string;
     it("should craete a new product", async () => {
         const result = await store.create(product);
+        product_id = result.id!;
         expect(result).toBeTruthy();
     })
 
-    it("should return the created product", async () => {
-        const result = await store.show('1');
+    it("should return a specific product", async () => {
+        const result = await store.show(product_id);
         expect(result.name).toEqual(product.name);
         expect(result.price).toEqual(product.price);
     })
