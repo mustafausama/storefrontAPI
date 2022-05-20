@@ -1,7 +1,4 @@
 {
-    "defaultEnv": {
-        "ENV": "NODE_ENV"
-    },
     "dev": {
         "database": {
             "ENV": "POSTGRES_DB"
