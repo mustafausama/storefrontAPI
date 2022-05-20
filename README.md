@@ -13,8 +13,27 @@
     SALT_ROUND=13
     JWT_SECRET=sEcReT0RkEy
 
-## The Store Front API
+# The Store Front API
+
+## Database requirements
+- Database: PostgreSQL
+- Port: 5432
+- Driver: [pg](https://www.npmjs.com/package/pg)
+
+## Installation and usage guide
+You need to follow those steps in order to install and run the application successfully.
+
+- Create two databases (one for testing and the other is for development)
+- Grant permissions for at least one user to the databases
+- Create a new **.env** file, paste the mentioned Environment variables and edit them according to your enviroment
+- Run the install script in the [Scripts section](##scripts).
+
+After that you can build, test, watch, or start the application.
+
 ## Scripts 
+To install the required packages run:
+    
+    npm install
 
 To start the application in development mode run:
 
