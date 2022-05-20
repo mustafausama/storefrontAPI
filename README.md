@@ -23,25 +23,36 @@ To start the application in development mode run:
 To start the application in watch mode run:
 
     npm run watch
-  To execute the prettier script run:   
+To build the application run:   
 
     npm run build
 
-   To build the application and test it run:
+To build the application and test it run:
    
 
     npm run test
+[Windows] To build the application and test it :
+   
+
+    npm run test:windows
 
  
 
 ## File structure
 
-* **Routing**
-All routings are available in the REQUIREMENTS.md file
+* **handlers:** the handlers folder contains the handler functions used in routings
+* **models:** the models folder contains the schemas and models of the database tables
+* **services:** the services folder contains the dashboard controller
+* **tests:** the tests folder contains the testing helper and the unit tests required for each function and api endpoin
+
+
+
 
 ## Unit Tests
 
 There are unit tests for every functionality the API provides
-- There are unit tests for the user inside src/tests/user.spec.ts
+
+Unit tests cover all the required model functions and all the API endpoints.
+- There are unit tests for the user inside src/tests/user.spec.ts.
 - There are unit tests for the order inside src/tests/order.spec.ts
 - There are unit tests for the product inside src/tests/product.spec.ts

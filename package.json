@@ -10,6 +10,7 @@
     "migrate:down": "db-migrate down",
     "migrate:reset": "db-migrate reset",
     "test": "npm run build &&export NODE_ENV=test&& db-migrate --env test up && jasmine && db-migrate --env test reset",
+    "test:windows": "npm run build &&set NODE_ENV=test&& db-migrate --env test up && jasmine && db-migrate --env test reset",
     "build": "rm -rf ./dist && npx tsc"
   },
   "keywords": [],
