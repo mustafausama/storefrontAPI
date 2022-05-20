@@ -8,7 +8,7 @@
     POSTGRES_TEST_DB=storefront_test
     POSTGRES_TEST_USER=magical_user_test
     POSTGRES_TEST_PASSWORD=123456
-    ENV=dev
+    NODE_ENV=dev
     BCRYPT_PASSWORD=speak-friend-and-enter
     SALT_ROUND=13
     JWT_SECRET=sEcReT0RkEy
