@@ -3,7 +3,7 @@ import cors from 'cors';
 import Routing from './routes';
 
 const app: Express = express()
-const address: string = "0.0.0.0:3000"
+const address: string = "127.0.0.1:3000"
 
 app.use(cors())
 app.use(express.json())
